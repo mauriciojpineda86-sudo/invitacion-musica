@@ -1,14 +1,27 @@
+Perfecto 👌 ya vi tu link.
+
+Vamos a hacerlo elegante y profesional:
+
+👉 La persona entra al link de GitHub
+👉 Ve el cartel
+👉 Hace clic
+👉 Empieza la música
+👉 Se abre tu Google Site automáticamente
+👉 La música sigue sonando de fondo
+
+🔥 ESTE ES TU CÓDIGO LISTO
+
+Reemplaza COMPLETAMENTE tu index.html por esto:
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Invitación</title>
-  <!-- actualización -->
+<title>15 de Sofía</title>
 
 <style>
 body{
   margin:0;
-  padding:0;
   font-family:Arial, sans-serif;
 }
 
@@ -25,7 +38,6 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  z-index:9999;
 }
 
 button{
@@ -37,7 +49,6 @@ button{
   cursor:pointer;
   border-radius:10px;
 }
-
 </style>
 </head>
 
@@ -49,18 +60,16 @@ button{
   <button onclick="iniciar()">ENTRAR</button>
 </div>
 
-<audio id="musica" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
+<audio id="musica" src="musica.mp3" loop></audio>
 
 <script>
 function iniciar(){
   var audio = document.getElementById("musica");
 
-  audio.play().then(function() {
-      document.getElementById("pantallaInicio").style.display="none";
-  }).catch(function(error) {
-      alert("Si no escuchas la música, toca nuevamente.");
+  audio.play().then(function(){
+      window.location.href = "https://sites.google.com/view/15desofia/p%C3%A1gina-principal";
+  }).catch(function(error){
+      alert("Toca nuevamente para activar la experiencia.");
   });
 }
 </script>
