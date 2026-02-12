@@ -54,8 +54,12 @@ button{
 <script>
 function iniciar(){
   var audio = document.getElementById("musica");
-  audio.play();
-  document.getElementById("pantallaInicio").style.display="none";
+
+  audio.play().then(function() {
+      document.getElementById("pantallaInicio").style.display="none";
+  }).catch(function(error) {
+      alert("Si no escuchas la música, toca nuevamente.");
+  });
 }
 </script>
 
